@@ -1,5 +1,5 @@
 {
-  "name": "spec-ts",
+  "name": "@owensdoug/spec-ts",
   "version": "0.0.1",
   "scripts": {
     "beautify": "prettier --write ./src/*.ts",
@@ -7,11 +7,10 @@
     "lint-fix": "eslint --ext ./src/*.ts --fix",
     "build": "tsc",
     "test": "",
-    "prepare" : "npm run build",
-    "prepublish" : "npm run test && npm run lint",
-    "preversion" : "npm run lint",
     "version" : "npm run beautify && git add -A src",
     "postversion" : "git push && git push --tags",
+    "aws-codeartifact-login": "aws codeartifact login --tool npm --repository spec-ts --domain owensdoug",
+    "login": "npm aws-codeartifact-login",
     "publish": "npm publish",
     "bump" : "npm version patch"
   },

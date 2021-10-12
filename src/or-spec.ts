@@ -2,22 +2,23 @@ import { CompositeSpec } from "./composite-spec";
 import { Spec } from "./spec";
 
 export class OrSpec<T> extends CompositeSpec<T> {
-  private left: Spec<T>;
-  private right: Spec<T>;
+  private _left: Spec<T>;
+  private _right: Spec<T>;
 
   constructor(left: Spec<T>, right: Spec<T>) {
     super();
-    this.left = left;
-    this.right = right;
+    this._left = left;
+    this._right = right;
   }
 
   isSatisfiedBy(candidate: T): boolean {
     return (
-      this.left.isSatisfiedBy(candidate) || this.right.isSatisfiedBy(candidate)
+      this._left.isSatisfiedBy(candidate) ||
+      this._right.isSatisfiedBy(candidate)
     );
   }
 
   toString(): string {
-    return "(" + this.left.toString() + " or " + this.right.toString() + ")";
+    return "(" + this._left.toString() + " or " + this._right.toString() + ")";
   }
 }
