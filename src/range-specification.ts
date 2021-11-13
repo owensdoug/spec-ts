@@ -1,6 +1,6 @@
-import { CompositeSpec } from "./composite-spec";
+import { CompositeSpec } from "./composite-specification";
 
-export class RangeSpec<T> extends CompositeSpec<T> {
+export class RangeSpecification<T> extends CompositeSpec<T> {
   private _a: T;
   private _b: T;
 

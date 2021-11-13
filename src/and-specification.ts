@@ -1,11 +1,11 @@
-import { CompositeSpec } from "./composite-spec";
-import { Spec } from "./spec";
+import { CompositeSpec } from "./composite-specification";
+import { Specification } from "./specification";
 
-export class AndSpec<T> extends CompositeSpec<T> {
-  private _left: Spec<T>;
-  private _right: Spec<T>;
+export class AndSpecification<T> extends CompositeSpec<T> {
+  private _left: Specification<T>;
+  private _right: Specification<T>;
 
-  constructor(left: Spec<T>, right: Spec<T>) {
+  constructor(left: Specification<T>, right: Specification<T>) {
     super();
     this._left = left;
     this._right = right;

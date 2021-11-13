@@ -1,6 +1,6 @@
-import { OrSpec } from "./or-spec";
+import { AndSpecification } from "./and-specification";
 
-export class OrNotSpec<T> extends OrSpec<T> {
+export class AndNotSpecification<T> extends AndSpecification<T> {
   isSatisfiedBy(candidate: T): boolean {
     return super.isSatisfiedBy(candidate) !== true;
   }
