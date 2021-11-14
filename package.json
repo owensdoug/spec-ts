@@ -1,5 +1,5 @@
 {
-  "name": "@owensdoug/model-ts",
+  "name": "@owensdoug/specification-ts",
   "version": "0.0.1",
   "scripts": {
     "initialize": "npm install && npm run build",
