@@ -1,6 +1,6 @@
 {
   "name": "@owensdoug/specification-ts",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "scripts": {
     "initialize": "npm install && npm run build",
     "version": "npm run beautify && npm run test && npm run git-add",
