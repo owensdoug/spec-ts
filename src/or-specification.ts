@@ -1,7 +1,7 @@
-import { CompositeSpec } from "./composite-specification";
+import { CompositeSpecification } from "./composite-specification";
 import { Specification } from "./specification";
 
-export class OrSpecification<T> extends CompositeSpec<T> {
+export class OrSpecification<T> extends CompositeSpecification<T> {
   private _left: Specification<T>;
   private _right: Specification<T>;
 

@@ -5,7 +5,7 @@ import { OrSpecification } from "./or-specification";
 import { AndNotSpecification } from "./and-not-specification";
 import { AndSpecification } from "./and-specification";
 
-export abstract class CompositeSpec<T> implements Specification<T> {
+export abstract class CompositeSpecification<T> implements Specification<T> {
   abstract isSatisfiedBy(candidate: T): boolean;
 
   and(other: Specification<T>): Specification<T> {
